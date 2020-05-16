@@ -56,17 +56,19 @@
                         <section>
                             <article>
                                 <a target="_blank" class="article" v-for="article in getNews"
-                                    :href="article.url || article.webUrl">
+                                    :href="article.readMoreUrl">
 
-                                    <div class="child"><img :src="article.urlToImage" class="thumb"></div>
+                                    <div class="child"><img :src="article.imageUrl" class="thumb"></div>
                                     <div class="child">
                                         <header>
                                             <span v-if="!article.webTitle">{{ article.title }}</span>
                                             <span v-else>{{ article.webTitle }}</span>
-                                            <time>{{ formatDate(article.publishedAt) }}</time>
+                                            <time>{{ article.time }} - {{ article.date }}</time>
+                                            <time></time>
+                                            
 
-                                            <p v-if="article.abstract || article.description">
-                                                {{article.description }}</p>
+                                            <p v-if="article.content || article.description">
+                                                {{article.content }}</p>
                                         </header>
                                     </div>
                                 </a>
