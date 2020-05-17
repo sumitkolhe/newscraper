@@ -22,36 +22,41 @@ new Vue({
 
     getNews: [],
     active: 0,
+    loading:true
   },
 
   methods: {
     selectNews(i) {
       this.active = i;
       this.getNews = this.items[i].news;
+      
     },
 
     formatDate(date) {
-      const buildDate = new Date(date);
-
-      return buildDate.toLocaleString("en-US", {
+      var fields = date.split(',');
+      var maindate = fields[0];
+      const buildDate = new Date(maindate);
+      return buildDate.toLocaleDateString("en-US", {
         weekday: "short",
-        month: "long",
         day: "2-digit",
+        month: "long",
         year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
       });
     },
   },
 
   created() {
+    
     fetch(API + "all")
       .then((res) => res.json())
       .then((res) => {
         this.items[0].news = res.data;
         this.getNews = this.items[0].news;
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .finally(() => (this.loading = false))
+      
+    
     fetch(API + "national")
       .then((res) => res.json())
       .then((res) => {
@@ -129,6 +134,7 @@ new Vue({
       .then((res) => {
         this.items[10].news = res.data;
         this.getNews = this.items[10].news;
+        console.log(this.items[10].news);
       })
       .catch((err) => console.log(err));
 
@@ -139,5 +145,7 @@ new Vue({
         this.getNews = this.items[11].news;
       })
       .catch((err) => console.log(err));
+
+     
   },
 });
