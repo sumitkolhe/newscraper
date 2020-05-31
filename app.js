@@ -1,20 +1,20 @@
 const API_KEY = "&apiKey=a38d9a5560114809bad1ba8be8df849c";
 const TOP_HEADLINES =
-  "https://newsapi.org/v2/top-headlines?country=in&apiKey=3b5d0121520742d48d2a1e338737aa5d";
-const Business = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=3b5d0121520742d48d2a1e338737aa5d`;
+  "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&apiKey=3b5d0121520742d48d2a1e338737aa5d";
+const Business = `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=3b5d0121520742d48d2a1e338737aa5d`;
 const Entertainment =
-  "https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=3b5d0121520742d48d2a1e338737aa5d";
+  "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=3b5d0121520742d48d2a1e338737aa5d";
 const Health =
-  "https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=3b5d0121520742d48d2a1e338737aa5d";
+  "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=3b5d0121520742d48d2a1e338737aa5d";
 
 const Science =
-  "https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=3b5d0121520742d48d2a1e338737aa5d";
+  "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=3b5d0121520742d48d2a1e338737aa5d";
 const Sports =
-  "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=3b5d0121520742d48d2a1e338737aa5d";
+  "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=3b5d0121520742d48d2a1e338737aa5d";
 const Technology =
-  "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=3b5d0121520742d48d2a1e338737aa5d";
+  "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=3b5d0121520742d48d2a1e338737aa5d";
 
-const EVERYTHING = "https://newsapi.org/v2/everything?q=";
+const EVERYTHING = "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=";
 
 
 new Vue({
